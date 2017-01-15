@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Assertions;
 
 public class Player : MonoBehaviour {
 
@@ -8,11 +9,25 @@ public class Player : MonoBehaviour {
 	private bool jump = false;
 	[SerializeField]
 	private float jumpForce = 100f;
+	[SerializeField] 
+	private AudioClip sfxJump;
+	private AudioClip sfxDeath;
+	private AudioSource audioSource;
+
+
+	// awake is good for assertions and components that need to be initialized before start
+	void Awake() {
+		Assert.IsNotNull (sfxJump);
+		Assert.IsNotNull (sfxDeath);
+	}
+
+	
 	// Use this for initialization
 	void Start () {
 
 		anim = GetComponent<Animator> ();
 		rb = GetComponent<Rigidbody> ();
+		audioSource = GetComponent<AudioSource> ();
 	
 	}
 	
@@ -24,6 +39,7 @@ public class Player : MonoBehaviour {
 	// 0 left click
 			// 1 right click or mac double click
 			anim.Play("Jump");
+			audioSource.PlayOneShot(sfxJump);
 			rb.useGravity = true;
 			jump = true;
 
