@@ -1249,7 +1249,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 478424, guid: af0c03372d70e41ba90320b1c562599b, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 105024, guid: af0c03372d70e41ba90320b1c562599b, type: 2}
       propertyPath: m_Name
@@ -1337,6 +1337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 100
   sfxJump: {fileID: 8300000, guid: c1052ea081bf64b6199f7aa427595dd6, type: 3}
+  sfxDeath: {fileID: 0}
 --- !u!135 &196990785
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8610,7 +8611,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f0780852fd7ca414d808102308a8c0aa, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .68900001
   m_Pitch: 1
   Loop: 1
   Mute: 0

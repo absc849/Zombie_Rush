@@ -46,7 +46,6 @@ public class Rock : MovingObject {
 
 
 		}
-		print("Reached the target ni**aaaaaa");
 
 		yield return new WaitForSeconds (0.5f);
 

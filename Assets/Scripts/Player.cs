@@ -11,6 +11,7 @@ public class Player : MonoBehaviour {
 	private float jumpForce = 100f;
 	[SerializeField] 
 	private AudioClip sfxJump;
+	[SerializeField]
 	private AudioClip sfxDeath;
 	private AudioSource audioSource;
 
@@ -56,5 +57,13 @@ public class Player : MonoBehaviour {
 
 	}
 
+	void OnCollisionEnter(Collision collision) // this can be left empty you dont always need to collect information about the collison
+	{
+		if (collision.gameObject.tag.Equals ("Obstacle")) {
+			rb.AddForce(new Vector2(-50,20), ForceMode.Impulse);
+			rb.detectCollisions = false;
+			audioSource.PlayOneShot(sfxDeath);
+		}
+	}
 
 }
