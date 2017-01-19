@@ -11,22 +11,22 @@ public class Coin : MovingObject {
 	
 	[SerializeField]
 	float speed;
-	
+
+
 	//	[SerializeField]
 	//	float rotateSpeed;
 	
-	
+
 	
 	// Use this for initialization
 	void Start () {
-		
+
 		StartCoroutine (Move (bottPos));
 	}
 	
 
 	protected override void Update()
 	{
-		
 		if (GameManager.instance.PlayerActive) {
 			//makes rocks fly off screen :(
 			//transform.Rotate(Vector3.up, rotateSpeed * Time.deltaTime);
@@ -67,4 +67,18 @@ public class Coin : MovingObject {
 		
 		StartCoroutine (Move (newTarget));
 	}
+
+	void OnTriggerEnter(Collider other) 
+	{
+		if (other.gameObject.name == "Player"){
+		
+			Destroy(gameObject);
+
+
+			//audioSource.PlayOneShot(sfxDeath);
+			//GameManager.instance.PlayerCollided();
+		}
+	}
+
+
 }
