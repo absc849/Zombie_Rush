@@ -36,7 +36,7 @@ public class Player : MonoBehaviour {
 	void Update () {
 		// use fixed update if using rigid body
 
-		if (!GameManager.instance.GameOver) {
+		if (!GameManager.instance.GameOver && GameManager.instance.GameStarted) {
 			if (Input.GetMouseButtonDown (0)) {
 
 				GameManager.instance.PlayerStartedGame();
