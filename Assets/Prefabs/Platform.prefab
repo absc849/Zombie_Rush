@@ -11,9 +11,10 @@ GameObject:
   - 33: {fileID: 3302422}
   - 23: {fileID: 2350890}
   - 95: {fileID: 9591852}
+  - 65: {fileID: 6570796}
   m_Layer: 0
   m_Name: module_tile_02_ac
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,9 +45,10 @@ GameObject:
   - 33: {fileID: 3328694}
   - 23: {fileID: 2312502}
   - 95: {fileID: 9500698}
+  - 65: {fileID: 6513274}
   m_Layer: 0
   m_Name: module_tile_02_ac (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62,9 +64,10 @@ GameObject:
   - 33: {fileID: 3378694}
   - 23: {fileID: 2322186}
   - 95: {fileID: 9561558}
+  - 65: {fileID: 6571348}
   m_Layer: 0
   m_Name: module_tile_02_ac
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,9 +83,10 @@ GameObject:
   - 33: {fileID: 3313650}
   - 23: {fileID: 2363468}
   - 95: {fileID: 9586680}
+  - 65: {fileID: 6589678}
   m_Layer: 0
   m_Name: module_tile_02_ac (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,9 +102,10 @@ GameObject:
   - 33: {fileID: 3312446}
   - 23: {fileID: 2388378}
   - 95: {fileID: 9502016}
+  - 65: {fileID: 6576858}
   m_Layer: 0
   m_Name: module_tile_02_ac (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,9 +121,10 @@ GameObject:
   - 33: {fileID: 3367720}
   - 23: {fileID: 2321910}
   - 95: {fileID: 9580038}
+  - 65: {fileID: 6565864}
   m_Layer: 0
   m_Name: module_tile_02_ac (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,9 +140,10 @@ GameObject:
   - 33: {fileID: 3361524}
   - 23: {fileID: 2381108}
   - 95: {fileID: 9545792}
+  - 64: {fileID: 6466296}
   m_Layer: 0
   m_Name: stone_bridge (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,11 +156,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 467508}
-  - 65: {fileID: 6520876}
   - 114: {fileID: 11440538}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -169,9 +175,10 @@ GameObject:
   - 33: {fileID: 3390330}
   - 23: {fileID: 2371662}
   - 95: {fileID: 9502698}
+  - 64: {fileID: 6460530}
   m_Layer: 0
   m_Name: stone_bridge
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -581,18 +588,102 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 175650}
   m_Mesh: {fileID: 4300000, guid: 67c99715c42134b44a5cc621ebff5448, type: 3}
---- !u!65 &6520876
+--- !u!64 &6460530
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175650}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_Mesh: {fileID: 4300000, guid: 67c99715c42134b44a5cc621ebff5448, type: 3}
+--- !u!64 &6466296
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170178}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_Mesh: {fileID: 4300000, guid: 67c99715c42134b44a5cc621ebff5448, type: 3}
+--- !u!65 &6513274
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 174968}
+  m_GameObject: {fileID: 156284}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 6.20958471, y: 4.0648737, z: 4.00003147}
+  m_Center: {x: 1.78814025e-06, y: -1.96756887, z: 8.34465027e-07}
+--- !u!65 &6565864
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164434}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.20958471, y: 4.0648737, z: 4.00003147}
+  m_Center: {x: 5.60283752e-06, y: -1.96756887, z: -3.93390656e-06}
+--- !u!65 &6570796
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117008}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.20958471, y: 4.0648737, z: 4.00003147}
+  m_Center: {x: -1.1920838e-07, y: -1.96756887, z: 8.34465027e-07}
+--- !u!65 &6571348
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156736}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.20958471, y: 4.0648737, z: 4.00003147}
+  m_Center: {x: 3.69548889e-06, y: -1.96756887, z: -3.93390656e-06}
+--- !u!65 &6576858
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159218}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.20958471, y: 4.0648737, z: 4.00003147}
+  m_Center: {x: 2.74181457e-06, y: -1.96756887, z: -1.19209318e-07}
+--- !u!65 &6589678
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158444}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.20958471, y: 4.0648737, z: 4.00003147}
+  m_Center: {x: -1.1920838e-07, y: -1.96756887, z: 8.34465027e-07}
 --- !u!95 &9500698
 Animator:
   serializedVersion: 3
