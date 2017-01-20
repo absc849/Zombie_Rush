@@ -15,6 +15,15 @@ public class GameManager : MonoBehaviour {
 	private bool gameOver = false;
 	private bool gameStarted = false;
 
+	private float score = 0;
+	//private float currentScore = 0;
+	
+	public float Score{
+		get {return score;}
+	}
+
+
+
 	public bool PlayerActive{
 		get {return playerActive;}
 	}
@@ -62,4 +71,9 @@ public class GameManager : MonoBehaviour {
 		mainMenu.SetActive (false);
 		gameStarted = true;
 	}
+
+	public void AddScore (){
+		score += 20;
+	}
+
 }

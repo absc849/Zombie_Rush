@@ -70,7 +70,10 @@ public class Coin : MovingObject {
 
 	void OnTriggerEnter(Collider other) 
 	{
+
 		if (other.gameObject.name == "Player"){
+			GameManager.instance.AddScore();
+			print (GameManager.instance.Score);
 		
 			Destroy(gameObject);
 
@@ -78,6 +81,7 @@ public class Coin : MovingObject {
 			//audioSource.PlayOneShot(sfxDeath);
 			//GameManager.instance.PlayerCollided();
 		}
+
 	}
 
 
