@@ -69,13 +69,6 @@ public class Player : MonoBehaviour {
 			audioSource.PlayOneShot (sfxDeath);
 			GameManager.instance.PlayerCollided ();
 
-		}//next part doesnt work 
-		else if (collision.gameObject.tag.Equals ("Coin")) {
-//			currentScore = score + 20;
-//			print (currentScore);
-
-			print ("Yay");
-
 		}
 	}
 

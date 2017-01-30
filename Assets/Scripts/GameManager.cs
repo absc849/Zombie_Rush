@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.Assertions;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -11,10 +12,12 @@ public class GameManager : MonoBehaviour {
 	//we are just going to set this as inactive, all GameObjects have active or inactive values
 	[SerializeField]
 	private GameObject mainMenu;
+	[SerializeField]
+	private GameObject gameOverScreen;
 	private bool playerActive = false;
 	private bool gameOver = false;
 	private bool gameStarted = false;
-
+	public Text scoreTxt;
 	private float score = 0;
 	//private float currentScore = 0;
 	
@@ -60,6 +63,7 @@ public class GameManager : MonoBehaviour {
 
 	public void PlayerCollided() {
 		gameOver = true;
+		StartCoroutine (WaitForGameOver());
 
 	}
 
@@ -72,8 +76,22 @@ public class GameManager : MonoBehaviour {
 		gameStarted = true;
 	}
 
+	public void EndGame() {
+		gameOverScreen.SetActive (true);
+		scoreTxt.text = "Score: " + score;
+	}
+
+
 	public void AddScore (){
 		score += 20;
+		//scoreTxt.text = "Score: " + score;
+	}
+
+	IEnumerator WaitForGameOver(){
+		yield return new WaitForSeconds (3.0f);
+			
+		EndGame ();
+
 	}
 
 }
