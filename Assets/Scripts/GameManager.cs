@@ -2,6 +2,9 @@
 using System.Collections;
 using UnityEngine.Assertions;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
+
 
 public class GameManager : MonoBehaviour {
 
@@ -50,6 +53,7 @@ public class GameManager : MonoBehaviour {
 		DontDestroyOnLoad (gameObject);
 
 		Assert.IsNotNull (mainMenu);
+
 	}
 	// Use this for initialization
 	void Start () {
@@ -74,6 +78,15 @@ public class GameManager : MonoBehaviour {
 	public void EnterGame() {
 		mainMenu.SetActive (false);
 		gameStarted = true;
+	}
+
+	public void RestartGame() {
+		playerActive = false;
+		gameOver = false;
+		gameStarted = false;
+		gameOverScreen.SetActive (false);
+		SceneManager.LoadScene ("Game");
+
 	}
 
 	public void EndGame() {
